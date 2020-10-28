@@ -40,7 +40,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>simple tic-tac-toe app</h1>
+      <header className="app-header">
+        <h1>simple tic-tac-toe app</h1>
+      </header>
       <div styleName="gameboard-container">
         <Gameboard squares={history[stepNumber]} onClick={handleClick} />
       </div>
