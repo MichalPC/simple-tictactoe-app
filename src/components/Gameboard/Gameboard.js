@@ -1,11 +1,15 @@
+import React from "react";
+import Square from '../Square/Square';
 import './Gameboard.css';
 
-function App() {
+function Gameboard({ squares, onClick }) {
   return (
-    <div className="gameboard-container" style={width=500, height=500}>
-        
+    <div className='gameboard'>
+        {squares.map((square, i) => (
+          <Square key={i} value={square} onClick={() => onClick(i)} />
+        ))}
     </div>
   );
 }
 
-export default App;
+export default Gameboard;

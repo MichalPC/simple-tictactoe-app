@@ -1,0 +1,22 @@
+.gameboard {
+    border: 1rem solid #ff652f;
+    background: #ff652f;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.X {
+    color: coral;
+}
+
+.O {
+    color: cornflowerblue;
+}
+
+.squares {
+    width: 200px;
+    height: 200px;
+}
