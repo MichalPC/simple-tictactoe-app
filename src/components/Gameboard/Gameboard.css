@@ -8,14 +8,6 @@
     gap: 1rem;
 }
 
-.X {
-    color: coral;
-}
-
-.O {
-    color: cornflowerblue;
-}
-
 .squares {
     width: 200px;
     height: 200px;
