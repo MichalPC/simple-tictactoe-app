@@ -1,0 +1,22 @@
+:root {
+    --square-color: rgb(48, 48, 48);
+}
+
+.squares {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-color: var(--square-color);
+
+    font-size: 72px;
+    font-weight: 800px;
+}
+
+.squares hover {
+    outline: none;
+}
