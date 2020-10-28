@@ -47,8 +47,8 @@ function App() {
         <div styleName="gameboard-container">
           <Gameboard squares={history[stepNumber]} onClick={handleClick} />
         </div>
-        <label>{winner ? "Winner: " + winner: "Next Player:" + currentPlayer}</label>
         <div className="info-container">
+          <label>{winner ? "Winner: " + winner: "Next Player:" + currentPlayer}</label>
           <label>History</label>
           {showHistory()}
         </div>
