@@ -51,7 +51,9 @@ function App() {
           <label>{winner ? "Winner: " + winner: "Next Player:" + currentPlayer}</label>
           <div className="history-container">
             <label>History</label>
-            {showHistory()}
+            <div className="history-list">
+              {showHistory()}
+            </div>
           </div>
         </div>
       </main>
