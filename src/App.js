@@ -43,14 +43,16 @@ function App() {
       <header className="app-header">
         <h1>simple tic-tac-toe app</h1>
       </header>
-      <div styleName="gameboard-container">
-        <Gameboard squares={history[stepNumber]} onClick={handleClick} />
-      </div>
-      <label>{winner ? "Winner: " + winner: "Next Player:" + currentPlayer}</label>
-      <div className="info-container">
-        <label>History</label>
-        {showHistory()}
-      </div>
+      <main className="main-container">
+        <div styleName="gameboard-container">
+          <Gameboard squares={history[stepNumber]} onClick={handleClick} />
+        </div>
+        <label>{winner ? "Winner: " + winner: "Next Player:" + currentPlayer}</label>
+        <div className="info-container">
+          <label>History</label>
+          {showHistory()}
+        </div>
+      </main>
     </div>
   );
 }
