@@ -44,7 +44,7 @@ function App() {
         <h1>Simple Tic-Tac-Toe App</h1>
       </header>
       <main className="main-container">
-        <div styleName="gameboard-container">
+        <div className="gameboard-container">
           <h1 className="player-label">{winner ? "Winner: " + winner: "Next Player:" + currentPlayer}</h1>
           <Gameboard squares={history[stepNumber]} onClick={handleClick} />
         </div>
