@@ -3,6 +3,7 @@ import Square from '../Square/Square';
 import './Gameboard.css';
 
 function Gameboard({ squares, onClick }) {
+
   return (
     <div className='gameboard'>
         {squares.map((square, i) => (

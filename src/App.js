@@ -28,7 +28,7 @@ function App() {
     setXisNext(step % 2 === 0);
   }
 
-  const showHistory = () => 
+  const showHistory = () =>
     history.map((_step, move) => {
       const destination = move ? `Go to move #${move}` : `Go to start`;
       return (
@@ -39,24 +39,27 @@ function App() {
     });
 
   return (
-    <div className="App">
+    <div className="app">
       <header className="app-header">
-        <h1>simple tic-tac-toe app</h1>
+        <h1>Simple Tic-Tac-Toe App</h1>
       </header>
       <main className="main-container">
         <div styleName="gameboard-container">
+          <h1 className="player-label">{winner ? "Winner: " + winner: "Next Player:" + currentPlayer}</h1>
           <Gameboard squares={history[stepNumber]} onClick={handleClick} />
         </div>
         <div className="info-container">
-          <label>{winner ? "Winner: " + winner: "Next Player:" + currentPlayer}</label>
+          <h1>History</h1>
           <div className="history-container">
-            <label>History</label>
             <div className="history-list">
               {showHistory()}
             </div>
           </div>
         </div>
       </main>
+      <footer className="app-footer">
+        <h1>By Michal Cyganek</h1>
+      </footer>
     </div>
   );
 }
