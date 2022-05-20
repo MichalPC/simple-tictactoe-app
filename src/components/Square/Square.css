@@ -13,8 +13,7 @@
     color: white;
     background-color: var(--square-color);
 
-    font-size: 72px;
-    font-weight: 800px;
+    font-size: 8vh;
     border-radius: 10px;
 }
 

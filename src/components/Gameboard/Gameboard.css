@@ -2,8 +2,10 @@
     border: 0.75rem solid #ff652f;
     border-radius: 20px;
     background: #ff652f;
-    height: 550px;
-    width: 550px;
+    height: 60vh;
+    width: 60vh;
+    min-width: 250px;
+    min-height: 250px;
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     gap: 0.5rem;
