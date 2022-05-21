@@ -1,9 +1,14 @@
 :root {
-  --header-height: 80px;
-  --footer-height: 60px;
+  --background-color: #969696;
+  --header-height: 100px;
+  --footer-height: 70px;
+  --er-color: #5e5e5e;
+  --pre-header-color: #7a7a7a;
+  --pre-header-height: 0px;
 }
 
 * {
+  color: white;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -12,7 +17,7 @@
 
 html, body {
   height: 100%;
-  background-color: rgb(235, 181, 115);
+  background-color:var(--background-color);
 }
 
 .app-footer {
@@ -22,31 +27,32 @@ html, body {
   height: var(--footer-height);
   width: 100%;
   display: flex;
-  background-color: rgb(46, 46, 46);
+  background-color: var(--er-color);
   align-items: center;
   color: white;
 }
 
 .app-footer h1{
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .app-header {
-  height: 60px;
+  z-index: 1;
   padding: 2rem;
   height: var(--header-height);
   width: 100%;
-  background-color: rgb(46, 46, 46);
+  background-color: var(--er-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 0px 5px 5px rgba(0,0,0,0.2);
+  box-shadow: 0px 5px 5px 3px rgba(0,0,0,0.2);
 }
 
 .app-header h1 {
   width:100%;
+  padding-left: 2rem;
   text-align: left;
-  color: white;
+  font-style: none;
 }
 
 .gameboard-container {
@@ -60,8 +66,7 @@ html, body {
 }
 
 .history-container {
-  height: 100%;
-  overflow: scroll;
+  overflow: visible;
   overflow-x: hidden;
 }
 
@@ -71,15 +76,15 @@ html, body {
 }
 
 .info-container {
-  color: white;
-  border: 0.75rem solid #ff652f;
+  border: 1rem solid #404040;
   border-radius: 20px;
-  background-color: rgb(48, 48, 48);
+  background-color: #ababab;
   display: flex;
   flex-direction: column;
   margin-left: 3rem;
+  margin-top: 2vh;
   width: 300px;
-  height: 55vh;
+  height: 60vh;
   overflow-x: hidden;
 }
 
@@ -99,8 +104,8 @@ html, body {
 
 .main-container {
   position: absolute;
-  top: 80px;
-  bottom: 40px;
+  top: calc(var(--header-height) + var(--pre-header-height));
+  bottom: var(--footer-height);
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -111,6 +116,12 @@ html, body {
 
 .player-label{
   font-size: 2rem;
+}
+
+.pre-header {
+  z-index: 9;
+  background-color: var(--pre-header-color);
+  height: var(--pre-header-height);
 }
 
 #root {
@@ -140,24 +151,26 @@ html, body {
     top: auto;
     bottom: auto;
     padding: 0;
+    padding-top: 50px;
     margin: 0;
     flex-direction: column;
     width: 100%;
     text-align: center;
     align-items: center;
+    overflow: hidden;
   }
 
   .info-container {
     position: relative;
+    height: auto;
     width: 80vw;
     margin-left: 0;
-    margin-top: 25px;
+    margin-top: 75px;
     min-height: 350px;
     margin-bottom: 1.5rem;
   }
 
   .history-container {
-    overflow:auto;
     overflow-x: hidden;
   }
 }

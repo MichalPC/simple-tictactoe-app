@@ -40,9 +40,11 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
-        <h1>Simple Tic-Tac-Toe App</h1>
-      </header>
+      <div className="pre-header">
+      </div>
+      <div className="app-header">
+        <h1>Simple Tic-Tac-Toe</h1>
+      </div>
       <main className="main-container">
         <div className="gameboard-container">
           <h1 className="player-label">{winner ? "Winner: " + winner: "Next Player:" + currentPlayer}</h1>

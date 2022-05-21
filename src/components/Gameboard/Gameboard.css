@@ -1,18 +1,23 @@
+#root {
+  --background-color: #404040;
+}
+
 .gameboard {
-    border: 0.75rem solid #ff652f;
-    border-radius: 20px;
-    background: #ff652f;
+    border: 1rem solid var(--background-color);
+    border-radius: 25px;
+    background-color: var(--background-color);
     height: 60vh;
     width: 60vh;
     min-width: 250px;
     min-height: 250px;
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 @media only screen and (max-width: 1080px) {
   .gameboard {
+    margin-top: 40px;
     width: 100%;
     height: 80vw;
   }
